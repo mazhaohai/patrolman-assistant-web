@@ -1,3 +1,4 @@
+
 <template>
 	<div>
 		<div class="page-bar">
@@ -84,9 +85,30 @@
         </template>
       </el-table-column>
     </el-table>
+        <div style="text-align:right;">
+            <div class="block" style="text-align:right;margin-top: 10px">
+                <span class="demonstration"></span>
+                <el-pagination
+                        @size-change="handleSizeChange"
+                        @current-change="handleCurrentChange"
+                        :current-page="currentPage4"
+                        :page-sizes="[100, 200, 300, 400]"
+                        :page-size="100"
+                        layout="total, sizes, prev, pager, next, jumper"
+                        :total="400">
+                </el-pagination>
+            </div>
+        </div>
 		<!--<el-button @click="visible = true">按钮</el-button>-->
-		<el-dialog v-model="visible" title="Hello world">
-			<p>欢迎进入 version</p>
+		<el-dialog v-model="visible" title="提示">
+			<h3 style="margin-bottom:20px">你确定要删除么</h3>
+
+            <div style="text-align:right;">
+                <el-button type="primary">确定</el-button>
+                <el-button @click="visible = false">取消</el-button>
+            </div>
+
+
 		</el-dialog>
 	</div>
 
@@ -138,12 +160,15 @@
 				this.$router.push(path);
 			},
       createVersion(row){
-        this.$router.push({ name: 'versiondetail', params: {id:row.name}})
+        // this.$router.push({ name: 'versionCreate', params: {id:row.name}})
+        this.$router.push({ name: 'versionCreate'})
       },
       detailVersion(row){
 			    console.log(row.address);
+          this.$router.push({ name: 'versiondetail', params: {id:row.address}})
       },
       deleteVersion(row){
+          this.visible = true;
           console.log(row)
       },
 			getList() {

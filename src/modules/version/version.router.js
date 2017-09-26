@@ -19,6 +19,7 @@
 //};
 const Version = r => require.ensure([], () => r(require('./version')), 'version');
 const Detail = r => require.ensure([], () => r(require('./detail')), 'version');
+const Create = r => require.ensure([], () => r(require('./create')), 'version');
 export default [{
 	path: '/version',
 	name: 'version',
@@ -27,6 +28,10 @@ export default [{
 	path: '/versiondetail',
 	name: 'versiondetail',
 	component: Detail
+},{
+	path: '/versionCreate',
+	name: 'versionCreate',
+	component: Create
 }];
 
 //export {BETA_ROUTER_INFO};
