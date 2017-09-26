@@ -17,10 +17,16 @@
 //	'export-unit': BETA_PATH_PREFIX + '/export-unit'
 //};
 const Department = r => require.ensure([], () => r(require('./department')), 'department');
+const Detail = r => require.ensure([], () => r(require('./detail')), 'user');
 export default [{
 	path: '/department',
 	name: 'department',
 	component: Department
+},
+{
+	path: '/departmentdetail',
+	name: 'departmentdetail',
+	component: Detail
 }
 ];
 
