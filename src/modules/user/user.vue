@@ -26,13 +26,13 @@
 		</el-form>
 		
 		<el-table :data="tableData" style="width: 100%">
-      		<el-table-column prop="yhm" label="用户名" width="110">
+      		<el-table-column prop="yhm" label="用户名" >
       		</el-table-column>
       		<el-table-column prop="jh" label="警号">
       		</el-table-column>
-      		<el-table-column prop="sfz" label="身份证号" width="190">
+      		<el-table-column prop="sfz" label="身份证号">
       		</el-table-column>
-      		<el-table-column prop="userImg" label="头像" width="120">
+      		<el-table-column prop="userImg" label="头像">
       		</el-table-column>
       		<el-table-column prop="sjh" label="手机号">
       		</el-table-column>
@@ -44,10 +44,10 @@
       		</el-table-column>
       		<el-table-column prop="bz" label="备注">
       		</el-table-column>
-      		<el-table-column prop="cz" label="操作" width="200">
+      		<el-table-column prop="cz" label="操作" width="150">
       			<template scope="scope">
-			        <el-button type="primary" @click="detailUser(scope.$index, scope.row)">修改</el-button>
-			        <el-button type="danger" @click="deleteUser(scope.$index, scope.row)">删除</el-button>
+			        <el-button type="primary" size='small' @click="detailUser(scope.$index, scope.row)">修改</el-button>
+			        <el-button type="danger" size='small' @click="deleteUser(scope.$index, scope.row)">删除</el-button>
 			      </template>
       		</el-table-column>
     	</el-table>

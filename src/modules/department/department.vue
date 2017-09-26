@@ -26,10 +26,10 @@
       		</el-table-column>
       		<el-table-column prop="bz" label="备注">
       		</el-table-column>
-      		<el-table-column prop="cz" label="操作" width="200">
+      		<el-table-column prop="cz" label="操作" width="150">
       			<template scope="scope">
-			        <el-button type="primary" @click="detailDepartment(scope.$index, scope.row)">修改</el-button>
-			        <el-button type="danger" @click="deleteDepartment(scope.$index, scope.row)">删除</el-button>
+			        <el-button type="primary" size='small' @click="detailDepartment(scope.$index, scope.row)">修改</el-button>
+			        <el-button type="danger" size='small' @click="deleteDepartment(scope.$index, scope.row)">删除</el-button>
 			      </template>
       		</el-table-column>
     	</el-table>
