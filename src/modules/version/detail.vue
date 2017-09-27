@@ -52,7 +52,7 @@
 
 					<el-form-item>
 						<el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
-						<el-button @click="resetForm('ruleForm')">重置</el-button>
+						<el-button @click="gobackProv()"> 取消</el-button>
 					</el-form-item>
 
 				</el-form>
@@ -204,6 +204,10 @@
         },
 
         methods: {
+            gobackProv(){
+
+                this.$router.push({ name: 'version'});
+            },
 
             submitUpload() {
                 this.$refs.upload.submit();
@@ -251,7 +255,7 @@
 
 </script>
 
-<style>
+<style scoped>
 
 	.el-upload__input{
 		display: none!important;

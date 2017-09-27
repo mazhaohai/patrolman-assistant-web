@@ -19,6 +19,7 @@
 //};
 const Role = r => require.ensure([], () => r(require('./role')), 'role');
 const Detail = r => require.ensure([], () => r(require('./detail')), 'role');
+const Create = r => require.ensure([], () => r(require('./create')), 'role');
 export default [{
 	path: '/role',
 	name: 'role',
@@ -27,6 +28,10 @@ export default [{
 	path: '/roledetail',
 	name: 'roledetail',
 	component: Detail
+},{
+    path: '/roleCreate',
+    name: 'roleCreate',
+    component: Create
 }];
 
 //export {BETA_ROUTER_INFO};
