@@ -1,17 +1,15 @@
 import Constants from '../../utils/constants';
 import HttpUtils from '../../utils/http.utils';
 const urls = {
-		'list': 'http://api.restful.5lux.com.cn/good/list_new',
-    'postDemo':'http://www.baidu.com'
+	'updateuserinfo': 'http://api.restful.5lux.com.cn/good/list_new',
+    'createuser':'http://www.baidu.com'
 }
 
 let UserSrv = {
-	list: function (params = {}) {
-	  console.log(urls.list)
+	updateUserInfo: function (params = {}) {
 		return HttpUtils.get(urls.list,params);
 	},
-  postDemo: function (params = {}) {
-	  console.log(urls.postDemo)
+  	createUser: function (params = {}) {
 		return HttpUtils.get(urls.postDemo,params);
 	},
 	filters: function (params = {}) {
