@@ -24,8 +24,7 @@
 		  	</el-form-item>
 		  	<el-button type="primary" class="xj" @click="clickFn">新建<i class="el-icon-plus el-icon--right"></i></el-button>
 		</el-form>
-		
-		<el-table :data="tableData" style="width: 100%">
+			<el-table :data="tableData" style="width: 100%">
       		<el-table-column prop="yhm" label="用户名">
       		</el-table-column>
       		<el-table-column prop="jh" label="警号">
